@@ -2217,7 +2217,7 @@ void Gfx::doTilingPatternFill(GfxTilingPattern *tPat,
   }
   m1[4] = m[4];
   m1[5] = m[5];
-  if (out->useTilingPatternFill() &&
+  if (out->useTilingPatternFill() && tPat->getTilingType()!=3 &&
 	out->tilingPatternFill(state, this, catalog, tPat->getContentStream(),
 		       tPat->getMatrix(), tPat->getPaintType(), tPat->getTilingType(),
 		       tPat->getResDict(), m1, tPat->getBBox(),
